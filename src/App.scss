@@ -1,0 +1,66 @@
+@import "bootstrap/scss/bootstrap";
+
+.table {
+  &-container {
+    position: relative;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    overflow: auto;
+    min-height: 500px;
+  }
+
+  &.blur {
+    filter: blur(5px);
+  }
+
+  td,
+  th {
+    width: calc((100% - 100px) / 5);
+    min-width: 150px;
+    vertical-align: middle;
+    padding: 10px 30px;
+  }
+
+  tr {
+    cursor: pointer;
+  }
+
+  .avatarContainer {
+    min-width: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+
+    .avatar {
+      border-radius: 5px;
+      overflow: hidden;
+    }
+  }
+}
+
+.loaderOverlay {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 25px;
+  background: linear-gradient(
+    110deg,
+    #ececec9a 8%,
+    #f5f5f55d 18%,
+    #ececec9a 33%
+  );
+  animation: 1.5s shine linear infinite;
+  background-size: 200% 100%;
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
